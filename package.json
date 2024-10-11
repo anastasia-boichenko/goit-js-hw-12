@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "glob": "^8.1.0",
     "vite": "^4.5.2"
   },
