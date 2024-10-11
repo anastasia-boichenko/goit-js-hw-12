@@ -6,7 +6,7 @@ export async function requestImages(q, value, limit) {
     params: {
       page: value,
       per_page: limit,
-      key: '44962191-b2ae47cce5f09f25f6a2bff80',
+      key: '45209949-5a312a82ff87c6973b888687f',
       q,
       image_type: 'photo',
       orientation: 'horizontal',
