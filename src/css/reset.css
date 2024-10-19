@@ -1,11 +1,7 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 p:last-child {
@@ -13,8 +9,6 @@ p:last-child {
 }
 
 ul {
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -25,6 +19,7 @@ a {
 
 button {
   cursor: pointer;
+  border: 0;
 }
 
 img {

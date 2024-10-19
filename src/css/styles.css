@@ -6,13 +6,225 @@
 */
 /* Common styles */
 @import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  padding-top: 36px;
+  margin-bottom: 32px;
+}
+
+.form input {
+  margin-right: 8px;
+  border: 1px solid #808080;
+  width: 272px;
+  height: 40px;
+  border-radius: 4px;
+  padding-left: 16px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #808080;
+  outline: 0;
+  transition: all 350ms;
+}
+
+.form input:hover {
+  border: 1px solid #000;
+}
+
+.form input:focus {
+  border: 1px solid #4e75ff;
+}
+
+.form button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  border: 0;
+  background-color: #4e75ff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  transition: background-color 350ms;
+}
+
+.form button:hover {
+  background-color: #6c8cff;
+}
+
+.images-list {
+  width: 1128px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+
+.images-item {
+  border: 1px solid #808080;
+  width: 360px;
+  min-height: 200px;
+  transition: all 350ms;
+  border-radius: 8px;
+}
+
+.images-item img {
+  width: 360px;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.images-item:hover {
+  box-shadow: 7px 7px 14px #6c8cff, -7px -7px 14px #f9f9f9;
+  transform: scale(1.02);
+}
+
+.images-item span {
+  display: block;
+}
+
+.property {
+  line-height: 200%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.weight {
+  font-weight: 800;
+}
+
+.loader {
+  margin: 0 auto;
+  display: none;
+  position: relative;
+  width: 85px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgb(121, 121, 212) 50px, transparent 0),
+    linear-gradient(blue 50px, transparent 0),
+    linear-gradient(rgb(121, 121, 212) 50px, transparent 0),
+    linear-gradient(blue 50px, transparent 0),
+    linear-gradient(rgb(121, 121, 212) 50px, transparent 0),
+    linear-gradient(blue 50px, transparent 0);
+  background-position: 0px center, 15px center, 30px center, 45px center,
+    60px center, 75px center, 90px center;
+  animation: rikSpikeRoll 0.65s linear infinite alternate;
+}
+@keyframes rikSpikeRoll {
+  0% {
+    background-size: 10px 3px;
+  }
+  16% {
+    background-size: 10px 50px, 10px 3px, 10px 3px, 10px 3px, 10px 3px, 10px 3px;
+  }
+  33% {
+    background-size: 10px 30px, 10px 50px, 10px 3px, 10px 3px, 10px 3px,
+      10px 3px;
+  }
+  50% {
+    background-size: 10px 10px, 10px 30px, 10px 50px, 10px 3px, 10px 3px,
+      10px 3px;
+  }
+  66% {
+    background-size: 10px 3px, 10px 10px, 10px 30px, 10px 50px, 10px 3px,
+      10px 3px;
+  }
+  83% {
+    background-size: 10px 3px, 10px 3px, 10px 10px, 10px 30px, 10px 50px,
+      10px 3px;
+  }
+  100% {
+    background-size: 10px 3px, 10px 3px, 10px 3px, 10px 10px, 10px 30px,
+      10px 50px;
+  }
+}
+
+.loader-open {
+  display: block;
+}
+
+.loader-more {
+  margin: 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: none;
+  position: relative;
+  border: 2px solid blue;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-bottom: 44px;
+}
+.loader-more::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  border: 2px solid rgb(121, 121, 212);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.loader-more-open {
+  display: block;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-more {
+  display: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 125px;
+  height: 40px;
+  background-color: #4e75ff;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-bottom: 44px;
+  transition: background-color 350ms;
+}
+
+.btn-more-open {
+  display: block;
+}
+
+.btn-more:hover {
+  background-color: #6c8cff;
+}
